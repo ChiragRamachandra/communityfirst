@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import Header from './components/Header.js';
+import HomeBeforeLogin from './pages/BeforeLoginHome';
 
 function App() {
 	return (
 		<Fragment>
-			<Header />
+			<HomeBeforeLogin />
 		</Fragment>
 	);
 }
