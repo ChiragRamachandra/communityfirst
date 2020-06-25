@@ -1,12 +1,21 @@
 import React, { Fragment } from 'react';
 import Header from '../components/Header';
-import Slider from '../components/Slider';
+import HomeSection from '../components/HomeSection';
+import Benefits from '../components/Benefits';
+import HowTo from '../components/HowTo';
+import AboutUs from '../components/AboutUs';
+import Footer from '../components/Footer';
 
-const BeforeLoginHome = () => {
+const BeforeLoginHome = ({ firebaseFunc }) => {
+	console.log(firebaseFunc);
 	return (
 		<Fragment>
 			<Header />
-			<Slider />
+			<HomeSection />
+			<Benefits />
+			<HowTo />
+			<AboutUs />
+			<Footer />
 		</Fragment>
 	);
 };

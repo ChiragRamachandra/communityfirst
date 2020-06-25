@@ -1,10 +1,14 @@
 import React, { Fragment } from 'react';
-import HomeBeforeLogin from './pages/BeforeLoginHome';
 
-function App() {
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Routes from './routes/Routes';
+
+function App(props) {
 	return (
 		<Fragment>
-			<HomeBeforeLogin />
+			<Router>
+				<Route component={Routes} />
+			</Router>
 		</Fragment>
 	);
 }
