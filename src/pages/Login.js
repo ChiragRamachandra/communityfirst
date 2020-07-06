@@ -27,6 +27,10 @@ const Login = ({ firebaseFunc }) => {
 		firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
 			// Handle Errors here.
 			var errorCode = error.code;
+			if (!errorCode) {
+				// Redirect to homepage
+			}
+
 			var errorMessage = error.message;
 			console.log(errorCode, errorMessage);
 			// ...
@@ -52,6 +56,9 @@ const Login = ({ firebaseFunc }) => {
 
 					<Button variant="primary" type="submit">
 						Submit
+					</Button>
+					<Button variant="primary" type="submit" onClick="/register">
+						<a href="/register">Register</a>
 					</Button>
 				</Form>
 			</Jumbotron>

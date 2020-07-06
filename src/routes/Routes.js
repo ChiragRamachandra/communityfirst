@@ -17,9 +17,10 @@ const providers = {
 const BeforeLoginHome = lazy(() => import('../pages/BeforeLoginHome'));
 const Login = lazy(() => import('../pages/Login'));
 const Register = lazy(() => import('../pages/Register'));
+const Dashboard = lazy(() => import('../pages/Dashboard'));
+const AboutUs = lazy(() => import('../pages/AboutUs'));
 
 // import Zoom from '../pages/zoom/ZoomComponent';
-// import Feedback from '../pages/zoom/Feedback';
 
 const Routes = (props) => {
 	const { user, signOut, signInWithGoogle } = props;
@@ -50,6 +51,16 @@ const Routes = (props) => {
 						exact
 						path="/register"
 						render={(props) => <Register {...props} firebaseFunc={firebaseFunc} />}
+					/>
+					<Route
+						exact
+						path="/dashboard"
+						render={(props) => <Dashboard {...props} firebaseFunc={firebaseFunc} />}
+					/>
+					<Route
+						exact
+						path="/about-us"
+						render={(props) => <AboutUs {...props} firebaseFunc={firebaseFunc} />}
 					/>
 
 					<PrivateRoute exact path="/categories" component={BeforeLoginHome} />
